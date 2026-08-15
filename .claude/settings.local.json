@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -E \"\\\\.\\(html|htm|js|json|md\\)$\")"
+      "Bash(grep -E \"\\\\.\\(html|htm|js|json|md\\)$\")",
+      "PowerShell(cd \"C:\\\\Users\\\\USER\\\\Desktop\\\\DUCK-ZION-PREMIUM\" && powershell -ExecutionPolicy Bypass -File \"criar-zip-auditado.ps1\" -RunAsJob 2>&1)",
+      "WebSearch"
     ]
   }
 }
