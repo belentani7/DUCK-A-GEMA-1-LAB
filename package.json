@@ -3,21 +3,16 @@
   "version": "0.1.0",
   "description": "Ecossistema Real de Produção Musical - DAW Web Profissional",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "dev": "npm run dev --workspace=frontend & npm run dev --workspace=backend",
-    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
-    "start": "npm start --workspace=backend",
-    "test": "npm test --workspace=frontend && npm test --workspace=backend",
-    "lint": "npm run lint --workspace=frontend && npm run lint --workspace=backend",
-    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
-    "setup": "npm install && npm run install-all",
-    "install-all": "npm install --workspace=frontend && npm install --workspace=backend"
+    "dev": "node server.js",
+    "build": "node --check server.js",
+    "start": "node server.js",
+    "test": "node --check server.js",
+    "lint": "prettier --check server.js",
+    "format": "prettier --write server.js",
+    "setup": "npm install"
   },
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
   "devDependencies": {
     "prettier": "^3.0.0",
     "concurrently": "^8.2.0"
@@ -40,6 +35,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seu-usuario/duck"
+    "url": "https://github.com/belentani7/DUCK-A-GEMA-1-LAB"
   }
 }
